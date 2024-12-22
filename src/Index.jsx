@@ -23,7 +23,7 @@ function Navbar() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <a className="nav-link" href="http://127.0.0.1:5500/Pages/Home.html">
-              Home <span className="sr-only">(current)</span>
+              Home
             </a>
           </li>
           <li className="nav-item">
