@@ -1,0 +1,136 @@
+#SearchKit{
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 12px;
+}
+#LocationSelect{
+    width:12em;
+    height:2em;
+    text-align: center;
+    margin-left: auto;
+
+}
+#SearchBox {
+    display:block;
+    position: relative;
+    width:100%;
+    height:100%;
+    min-width: 215px;
+    margin: auto auto;
+    border-radius: 10px;
+    padding-left: 20px;
+    border-width: 1px;
+    z-index: 0;
+
+    font-style: italic;
+}
+
+#ModalButton {width:6em;}
+
+.btn-group{
+    width: 100%;
+    height:2.5em;
+
+}
+
+.btn{
+    border-color: black;
+    color: black;
+    width:5em;
+}
+
+
+.SBContainer{
+    position: relative;
+    width:35rem;
+    height:2rem;
+}
+
+
+ .CardsContainer{ 
+     width:100%; 
+     height:100%; 
+     margin-bottom: 0px;
+} 
+
+.CardsFlex{
+    
+    display:flex;
+    width: 100%;
+    margin-left: 40px;
+    flex-direction: row;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    padding: 2rem;
+    row-gap: 35px;
+    column-gap: 70px;
+ 
+}
+
+.alert p{
+    margin-top: -10px;
+}
+
+.alert{
+    margin-bottom: -8px;
+    width: 4.8em;
+    height: 2em;
+    margin-left: 190px;
+}
+.card-img-top
+{
+    max-height: 280px;
+    object-fit: cover;
+}
+.card{
+    height:14em;
+    width:16.8em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.card-body h5{
+    font-size: 1.5em;
+    text-align: center;
+    margin-top:-6%;
+    font-style: italic;
+    color: rgb(95, 95, 95);
+}
+
+@media (max-width:480px) {
+
+    body{width: 100%;}
+    #SearchKit{
+        margin-right: 142px;
+        margin-top: 10px;
+        column-gap:30px;
+    }
+    .SBContainer{
+        width:12em;
+    }
+
+    #LocationSelect{
+        width:6em;
+    }   
+
+    .WholeCard{
+        width:4em;
+    }
+
+    .CardsContainer{
+        width:100%;
+    }
+    .CardsFlex{
+        flex-direction: column;
+        margin-left: 10px;
+    }
+    .btn-group{
+        width:3em;
+        height:2.4em;
+    }
+    #LocationSelect{
+        display: none;
+    }
+}

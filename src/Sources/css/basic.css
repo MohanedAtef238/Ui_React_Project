@@ -1,0 +1,28 @@
+/* === COLOR VARIABLES === */
+
+:root {
+    --main-powder: #fbfef9ff;
+    --text-color: #191923ff;
+    --accents: #FDBC86;
+    --accents-gray: #b6c0cdff;
+    --accents-pink: #f39a9dff;
+}
+
+:root {
+    --baby-powder: #fbfef9ff;
+    --raisin-black: #191923ff;
+    --khaki: #FDBC86;
+    --french-gray: #b6c0cdff;
+    --salmon-pink: #f39a9dff;
+}
+
+/* === GRADIENTS === */
+/* Common Gradient Definitions (Hex Format) */
+:root {
+    --gradient-top: linear-gradient(0deg, var(--color-baby-powder), var(--color-raisin-black), var(--color-medium-slate-blue), var(--color-glaucous), var(--color-salmon-pink));
+    --gradient-right: linear-gradient(90deg, var(--color-baby-powder), var(--color-raisin-black), var(--color-medium-slate-blue), var(--color-glaucous), var(--color-salmon-pink));
+    --gradient-bottom: linear-gradient(180deg, var(--color-baby-powder), var(--color-raisin-black), var(--color-medium-slate-blue), var(--color-glaucous), var(--color-salmon-pink));
+    --gradient-left: linear-gradient(270deg, var(--color-baby-powder), var(--color-raisin-black), var(--color-medium-slate-blue), var(--color-glaucous), var(--color-salmon-pink));
+    --gradient-diagonal: linear-gradient(45deg, var(--color-baby-powder), var(--color-raisin-black), var(--color-medium-slate-blue), var(--color-glaucous), var(--color-salmon-pink));
+    --gradient-radial: radial-gradient(var(--color-baby-powder), var(--color-raisin-black), var(--color-medium-slate-blue), var(--color-glaucous), var(--color-salmon-pink));
+}

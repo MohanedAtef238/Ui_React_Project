@@ -1,0 +1,365 @@
+
+.img-container {
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 0; 
+    box-shadow: none; 
+    transition: none; 
+    position: relative;
+    background-color: #fff;
+    border: 0px solid #e9ecef;
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    margin-top: 0; 
+    width: 100%;
+    height: 400px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 0%;
+}
+
+
+
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin-bottom: -30px;
+    background: rgba(23, 22, 22, 0.329);
+    border-radius: 0px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    z-index: 1;
+}
+
+.img-container:hover::before {
+    opacity: 1;
+}
+
+.img-container .caption {
+    position:absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1.4rem;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.img-container:hover .caption {
+    opacity: 1;
+}
+
+.title-container {
+    margin-bottom: 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 1rem;
+
+}
+
+.title-container h1 {
+    color: rgb(18, 66, 69);
+    font-weight: bolder;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    
+}
+
+.about-content {
+    margin-top: 20px;
+    margin-left: 15px;
+    padding: 20px;
+    background-color: #e9e9e9d4;
+
+}
+
+.about-content h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.about-content ul {
+    list-style-type:square;
+    padding: 0;
+}
+
+.about-content li {
+    margin-bottom: 0px;
+}
+
+.about-content p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.author-date {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.author-date .author {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.author-date .date {
+    font-size: 1em;
+    color: #666;
+}
+
+.social-media {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s;
+    font-size: 1.5em;
+}
+
+.social-media a:hover {
+    color: #007BFF;
+}
+
+.comments {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    width: 100%; 
+}
+
+.comments h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.comments form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comments textarea {
+    resize: vertical;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    height: 100px;
+    width: 100%;
+}
+
+.comments button {
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:  0.3s;
+}
+
+.comments button:hover {
+    background: #0056b3;
+}
+
+button.back {
+    width: auto;
+    height: auto;
+    background: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button.back:hover {
+    background: #021d3a;
+}
+
+.row {
+    display: flex;
+    align-items: flex-start;
+    width: 100%; 
+}
+
+.detailed {
+    flex: 1 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%; 
+}
+
+.blog-intro {
+    margin-top: -30px;
+}
+
+@media (max-width: 480px) {
+
+    .img-container {
+    overflow: hidden;
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+    position:relative;
+    background-color: #fff;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; 
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 16 / 5
+     
+}
+
+.img-container img {
+    width: 100%; 
+    height: 100%; 
+    display: block;
+    transition: transform 0.3s ease;
+    object-fit: cover; 
+}
+
+.img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    background: rgba(23, 22, 22, 0.329);
+    border-radius: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+
+    .img-container:hover::before {
+        opacity: 1; /* Visible on hover */
+    }
+
+    .img-container .caption {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: #fff;
+        font-size: 1rem; 
+        z-index: 2;
+        opacity: 0; 
+        transition: opacity 0.3s ease; 
+    }
+
+    .img-container:hover .caption {
+        opacity: 1; 
+    }
+
+    .title-container {
+        margin: 1rem auto;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .title-container h1 {
+        color: rgb(18, 66, 69);
+        font-size: 1.2rem; 
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+    }
+
+  
+    .about-content {
+        width: 100vw;
+        padding: 15px;
+        background-color: #e9e9e9d4;
+        font-size: 0.9rem; 
+        line-height: 1.4; 
+    }
+
+    .about-content h3 {
+        font-size: 1.2rem; 
+        margin-bottom: 5px;
+    }
+
+    .about-content ul {
+        list-style-type: square;
+        padding-left: 1rem;
+    }
+
+    .about-content li {
+        margin-bottom: 5px;
+    }
+
+    .about-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    .comments {
+        background: #fff;
+        padding: 10px; 
+        margin-top: 10px;
+        width: 90%; 
+        margin: 10px auto;
+    }
+
+    .comments h2 {
+        font-size: 1.2rem; 
+        margin-bottom: 10px;
+    }
+
+    .comments textarea {
+        resize: vertical;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        height: 80px;
+        width: 100%;
+    }
+
+    .comments button {
+        font-size: 0.9rem; 
+        padding: 8px 12px; 
+    }
+
+    button.back {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
+
+    .row {
+        flex-direction: column; 
+        align-items: center;
+        width: 100%;
+    }
+
+    .detailed {
+        width: 100%;
+        padding: 0;
+    }
+
+    .blog-intro {
+        margin-top: 0;
+        padding: 10px;
+    }
+}
