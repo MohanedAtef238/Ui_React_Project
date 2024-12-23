@@ -5,7 +5,7 @@ import "../src/assets/Sources/css/NavBarTopFixed.css";
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="/Pages/Home.html">
+      <a className="navbar-brand" href="/">
         Travel & Destination
       </a>
       <button
@@ -22,14 +22,14 @@ function Navbar() {
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link" href="http://127.0.0.1:5500/Pages/Home.html">
+            <a className="nav-link" href="/">
               Home
             </a>
           </li>
           <li className="nav-item">
             <a
               className="nav-link"
-              href="http://127.0.0.1:5500/Pages/TravelList.html"
+              href="/TravelList"
             >
               Destinations
             </a>
@@ -37,7 +37,7 @@ function Navbar() {
           <li className="nav-item">
             <a
               className="nav-link"
-              href="http://127.0.0.1:5500/Pages/BlogList.html"
+              href="/BlogList"
             >
               Blogs
             </a>
