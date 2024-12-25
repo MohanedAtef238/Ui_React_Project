@@ -4,10 +4,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Navbar from "./Index"; 
 import TravelList from "./TravelList";
-
 function App() {
   return (
-    <>
     <div>
       <Navbar />
       <BrowserRouter>
@@ -17,8 +15,7 @@ function App() {
           {/*<Route path="/BlogList" element={<BlogList />} />  */}
         </Routes>
       </BrowserRouter>
-      </div>
-    </>
+    </div>
   );
 }
 

@@ -1,10 +1,132 @@
 import {useState, useEffect} from 'react';
+import "./assets/Sources/css/TravelList.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import image1 from "./assets/Sources/img/Destinations/London2.jpg";
+import image2 from "./assets/Sources/img/Destinations/Giza.jpg";
+import image3 from "./assets/Sources/img/Destinations/NewYork.jpeg";
+import image4 from "./assets/Sources/img/Destinations/Paris.jpeg";
+import image5 from "./assets/Sources/img/Destinations/Tokyo.jpeg";
+import image6 from "./assets/Sources/img/Destinations/Sydney.jpeg";
+import image7 from "./assets/Sources/img/Destinations/Rome.jpeg";
 
-function TravelList() {
+const cardsList = [
+  { title: "London, UK", imgSrc: image1, alertTag: "New!" },
+  { title: "Giza, Egypt", imgSrc: image2, alertTag: "Hot!" },
+  { title: "New York, USA", imgSrc: image3, alertTag: "New!" },
+  { title: "Paris, France", imgSrc: image4, alertTag: "Hot!" },
+  { title: "Tokyo, Japan", imgSrc: image5, alertTag: "New!" },
+  { title: "Sydney, Australia", imgSrc: image6, alertTag: "Hot!" },
+  { title: "Rome, Italy", imgSrc: image7, alertTag: "New!" }
+];
+
+function SearchKit({searchFilter,checkFilter}) {
+    const [locationValue,setLocationValue] = useState('All');
+    function changeHandleLocation(e){
+        setLocationValue(e.target.value);
+        searchFilter(e.target.value);
+    }
+
+    const [searchValue,setSearchValue] = useState('');
+    function changeHandleSearch(e){
+        {console.log(e.target.value)}
+        setSearchValue(e.target.value);
+        searchFilter(e.target.value);
+    }
+
+    const[checkAll,setCheckAll] = useState(true);
+    const[checkHot,setCheckHot] = useState(false);
+    const[checkNew,setCheckNew] = useState(false);
+
+    function changeHandleCheck(e){
+        if(e.target.value=='All'){setCheckAll(true);setCheckHot(false);setCheckNew(false);} 
+        if(e.target.value=='Hot'){setCheckHot(true);setCheckAll(false);setCheckNew(false);} 
+        if(e.target.value=='New'){setCheckNew(true);setCheckAll(false);setCheckHot(false);} 
+        checkFilter(e.target.value)
+    }
+
+    return(
+    <div id='SearchKit'>
+            <div id="LSDiv">
+                    <select id="LocationSelect" onChange={changeHandleLocation}>
+                        <option>All</option>
+                        <option>UK</option>
+                        <option>USA</option>
+                    </select>
+                </div>
+                <div className="SBContainer">
+                    <input type="text"  id="SearchBox" value={searchValue} placeholder="Search For destination . . ." onInput={changeHandleSearch} />
+                </div>
+                <div className="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+                    <input type="checkbox" className="btn-check" id="btncheck1" autoComplete="off" value="All" onChange={changeHandleCheck} checked={checkAll}/>
+                    <label className="btn btn-outline-primary" htmlFor="btncheck1" >All</label>
+              
+                    <input type="checkbox" className="btn-check" id="btncheck2" autoComplete="off" value="Hot" onChange={changeHandleCheck} checked={checkHot}/>
+                    <label className="btn btn-outline-primary" htmlFor="btncheck2">Hot</label>
+              
+                    <input type="checkbox" className="btn-check" id="btncheck3" autoComplete="off" value="New" onChange={changeHandleCheck} checked={checkNew}/>
+                    <label className="btn btn-outline-primary" htmlFor="btncheck3">New</label>
+                </div>
+    </div>
+    );
+}
+
+function Card({ title, imgSrc, alertTag }) {
+
   return (
     <div>
-      <h1>This is TravelList</h1>
+        <div className="wholeCard">
+            <div className="alert alert-primary" role="alert">
+                <p>{alertTag}</p>
+            </div>
+            <div className="card">
+                <img src={imgSrc} className="card-img-top" alt={title + " image"} />
+                <div className="card-body">
+                <h5 className="card-title">{title}</h5>
+                </div>
+            </div>
+        </div>
     </div>
   );
 }
+
+function TravelList() {
+  const [cards,setCards] = useState(cardsList);
+  function SearchFilter(value){
+    {console.log(value)};
+    if(value === 'All' || value === '') {
+        setCards(cardsList);
+    }
+    else{
+        let newCards = cardsList.filter(card => card.title.toLowerCase().includes(value.toLowerCase()));
+        {console.log(newCards)};
+        setCards(newCards);
+    }
+  }
+
+  function CheckFilter(value){
+    {console.log(value)};
+    if(value === 'All') {
+        setCards(cardsList);
+    }
+    else{
+        let newCards = cardsList.filter(card => card.alertTag.toLowerCase().includes(value.toLowerCase()+"!"));
+        {console.log(newCards)};
+        setCards(newCards);
+    }
+  }
+
+  return (
+    <div>
+        <SearchKit searchFilter={SearchFilter} checkFilter={CheckFilter}  />
+        <div className="CardsContainer">
+            <div className="CardsFlex">
+                {cards.map((card, index) => (
+                <Card key={index} title={card.title} imgSrc={card.imgSrc} alertTag={card.alertTag} />
+                ))}
+            </div>
+        </div>
+    </div>
+  );
+}
+
 export default TravelList;
