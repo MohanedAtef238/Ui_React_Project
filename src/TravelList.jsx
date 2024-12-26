@@ -1,4 +1,7 @@
 import {useState, useEffect} from 'react';
+import $ from 'jquery';
+import 'bootstrap/dist/js/bootstrap.bundle.min'; // Add this line
+import { useNavigate } from 'react-router-dom'; // Add this line
 import "./assets/Sources/css/TravelList.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import image1 from "./assets/Sources/img/Destinations/London2.jpg";
@@ -18,6 +21,29 @@ const cardsList = [
   { title: "Sydney, Australia", imgSrc: image6, alertTag: "Hot!" },
   { title: "Rome, Italy", imgSrc: image7, alertTag: "New!" }
 ];
+
+function Modal({title}) {
+    return (
+        <div className="modal fade" id={title} tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div className="modal-dialog modal-dialog-centered" role="document">
+                <div className="modal-content">
+                    <div className="modal-header">
+                        <h5 className="modal-title" id="exampleModalLongTitle">{title}</h5>
+                    </div>
+                    <div className="modal-body">
+                        <p> <b>Date: </b> 11/12/2024 - 11/3/2025 </p>
+                        <p> <b>Sponsors:</b> <a href="https://www.visitengland.com/">Visit England</a>, <a href="https://www.instapay.eg/">Instapay</a>, Sportofolio ,<a href="https://www.egyptair.com/en/Pages/HomePage.aspx">Egypt Air</a></p>
+                        <p> <b>Brief's brief:</b></p>
+                        <p>
+                            London, the capital city of England, is a vibrant metropolis known for its rich history, diverse culture, and iconic landmarks.
+                        </p>
+                        <a className="btn btn-outline-primary" id="ModalButton" href="http://127.0.0.1:5500/Pages/Destinations/London.html" role="button"> Full Page </a>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    );
+}
 
 function SearchKit({searchFilter,checkFilter}) {
     const [locationValue,setLocationValue] = useState('All');
@@ -71,21 +97,26 @@ function SearchKit({searchFilter,checkFilter}) {
 }
 
 function Card({ title, imgSrc, alertTag }) {
+    const navigate = useNavigate(); // Add this line
 
-  return (
-    <div>
-        <div className="wholeCard">
-            <div className="alert alert-primary" role="alert">
-                <p>{alertTag}</p>
-            </div>
-            <div className="card">
-                <img src={imgSrc} className="card-img-top" alt={title + " image"} />
-                <div className="card-body">
-                <h5 className="card-title">{title}</h5>
+    function redirectTo(){
+        navigate(`/destination/${title}`);
+    }
+
+    return (
+        <div>
+            <div className="wholeCard" onClick={redirectTo}>
+                <div className="alert alert-primary" role="alert">
+                    <p>{alertTag}</p>
+                </div>
+                <div className="card">
+                    <img src={imgSrc} className="card-img-top" alt={title + " image"} />
+                    <div className="card-body">
+                    <h5 className="card-title">{title}</h5>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
   );
 }
 
@@ -121,7 +152,10 @@ function TravelList() {
         <div className="CardsContainer">
             <div className="CardsFlex">
                 {cards.map((card, index) => (
-                <Card key={index} title={card.title} imgSrc={card.imgSrc} alertTag={card.alertTag} />
+                <div key={index}>
+                    <Card title={card.title} imgSrc={card.imgSrc} alertTag={card.alertTag} />
+                    <Modal title={card.title} />
+                </div>
                 ))}
             </div>
         </div>

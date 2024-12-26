@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 import Navbar from "./Index"; 
 import TravelList from "./TravelList";
+import Destination from "./Destination";
 function App() {
   return (
     <div>
@@ -12,7 +13,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/TravelList" element={<TravelList />} />
-          {/*<Route path="/BlogList" element={<BlogList />} />  */}
+          <Route path="/destination/:title" element={<Destination />}/> 
+
         </Routes>
       </BrowserRouter>
     </div>
