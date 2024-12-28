@@ -20,7 +20,8 @@ const cardsList = [
   { title: "Tokyo, Japan", imgSrc: image5, alertTag: "New!" },
   { title: "Sydney, Australia", imgSrc: image6, alertTag: "Hot!" },
   { title: "Rome, Italy", imgSrc: image7, alertTag: "New!" }
-];
+]
+if(!localStorage.getItem('cards')){localStorage.setItem('cards',JSON.stringify(cardsList))};
 
 function Modal({title}) {
     return (
@@ -120,15 +121,22 @@ function Card({ title, imgSrc, alertTag }) {
   );
 }
 
+function AddCard(){
+    return(
+        <button onClick={()=>{location.href='/destinationForm'}} style={{width:'14em',height:'14em',borderRadius:'20px',textAlign:'center',marginTop:'25px'}}>Add Destination</button>
+    );
+}
+
 function TravelList() {
-  const [cards,setCards] = useState(cardsList);
+  let parsed = JSON.parse(localStorage.getItem('cards'));  
+  const [cards,setCards] = useState(parsed);
   function SearchFilter(value){
     {console.log(value)};
     if(value === 'All' || value === '') {
-        setCards(cardsList);
+        setCards(parsed);
     }
     else{
-        let newCards = cardsList.filter(card => card.title.toLowerCase().includes(value.toLowerCase()));
+        let newCards = parsed.filter(card => card.title.toLowerCase().includes(value.toLowerCase()));
         {console.log(newCards)};
         setCards(newCards);
     }
@@ -137,10 +145,10 @@ function TravelList() {
   function CheckFilter(value){
     {console.log(value)};
     if(value === 'All') {
-        setCards(cardsList);
+        setCards(parsed);
     }
     else{
-        let newCards = cardsList.filter(card => card.alertTag.toLowerCase().includes(value.toLowerCase()+"!"));
+        let newCards = parsed.filter(card => card.alertTag.toLowerCase().includes(value.toLowerCase()+"!"));
         {console.log(newCards)};
         setCards(newCards);
     }
@@ -157,6 +165,7 @@ function TravelList() {
                     <Modal title={card.title} />
                 </div>
                 ))}
+                <AddCard/>
             </div>
         </div>
     </div>
