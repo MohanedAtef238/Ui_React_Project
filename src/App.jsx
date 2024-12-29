@@ -10,6 +10,8 @@ import DestForm from "./DestForm";
 import BlogList from './components/BlogList';
 import BlogDetails from './components/BlogDetails';
 import Author from './components/Author';
+import Gallery from './Gallery';
+import Subgallery from './subgallery';
 <<<<<<< Updated upstream
 import Contact from './Contact';
 
@@ -40,6 +42,8 @@ function App() {
           <Route path="/blog-list" element={<BlogList />} />
           <Route path="/blog-details" element={<BlogDetails />} />
           <Route path="/blog-author" element={<Author />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/subgallery" element={<Subgallery />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/subgallery" element={<Subgallery />} />
         </Routes>
