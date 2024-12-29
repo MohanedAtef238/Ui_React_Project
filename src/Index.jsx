@@ -38,6 +38,11 @@ function Navbar() {
               Blogs
             </Link>
           </li>
+          <li className="nav-item">
+            <Link className="nav-link" to="/InfoPage">
+              Info
+            </Link>
+          </li>
         </ul>
       </div>
     </nav>

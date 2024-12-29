@@ -102,11 +102,11 @@ const Home = () => {
         <div className="main-content">
           <h1 className="section-title">Where To Next?</h1>
           <div className="image-row">
-            <a href="#">
+            <a href="/blog-list">
               <img src={op1} alt="Blogs redirect" />
               <div className="image-text">Blogs</div>
             </a>
-            <a href="#">
+            <a href="/TravelList">
               <img src={op2} alt="Destinations redirect" />
               <div className="image-text">Destinations</div>
             </a>
@@ -155,7 +155,7 @@ const Home = () => {
         <div className="footer-content">
           <p className="copyright">
             2024 Ui Project teehee. All rights reserved.{' '}
-            <a href="#" className="contact-link">
+            <a href="/Contact" className="contact-link">
               Contact Us
             </a>
           </p>
