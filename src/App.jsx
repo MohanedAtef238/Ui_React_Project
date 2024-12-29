@@ -20,7 +20,7 @@ function App() {
           <Route path="/TravelList" element={<TravelList />} />
           <Route path="/destination/:title" element={<Destination />}/>
           <Route path="/destinationForm" element={<DestForm/>}/>
-          <Route path="/" element={<BlogList />} />
+          <Route path="/blog-list" element={<BlogList />} />
           <Route path="/blog-details" element={<BlogDetails />} />
           <Route path="/blog-author" element={<Author />} />
         </Routes>

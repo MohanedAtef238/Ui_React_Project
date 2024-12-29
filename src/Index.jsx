@@ -37,7 +37,7 @@ function Navbar() {
           <li className="nav-item">
             <a
               className="nav-link"
-              href="/BlogList"
+              href="/blog-list"
             >
               Blogs
             </a>
