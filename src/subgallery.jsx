@@ -29,7 +29,7 @@ const Subgallery = () => {
     : images; 
 
   return (
-    <div>
+    <div className="gallery-container">
       <ul className="gallery-list">
         {imagesToRender.map((src, index) => (
           <li key={index}>

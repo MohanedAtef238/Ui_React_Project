@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #826afb; 
+  background: rgba(253, 188, 134, 0.8); 
 }
 
 form {
@@ -47,8 +47,8 @@ form h2 {
 }
 
 .field:focus {
-  border-color: #826afb;
-  box-shadow: 0 0 5px rgba(130, 106, 251, 0.5); 
+  border-color: rgba(253, 188, 134, 0.3);
+  box-shadow: 0 0 5px rgba(253, 188, 134, 0.4); 
 }
 
 .field.message {
@@ -59,7 +59,7 @@ form h2 {
 button {
   width: 100%;
   padding: 10px 15px;
-  background: #826afb;
+  background: rgba(253, 188, 134, 1.2);
   color: #fff;
   border: none;
   border-radius: 5px;

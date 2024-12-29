@@ -5,7 +5,7 @@ import img1 from './assets/Sources/img/Gallery/mainG1.jpg';
 import img2 from './assets/Sources/img/Gallery/mainG2.jpg';
 function Gallery() {
   return (
-    <div>
+    <div className="gallery-container">
       <div className="reverse-gradient-section">
           <div className="main-content">
               <div className="image-row">

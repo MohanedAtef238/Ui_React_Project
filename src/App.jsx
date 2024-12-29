@@ -17,8 +17,9 @@ import Contact from './Contact';
 function App() {
   return (
     <div>
-      <Navbar />
+
       <BrowserRouter>
+      <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/TravelList" element={<TravelList />} />
@@ -30,8 +31,6 @@ function App() {
           <Route path="/blog-list" element={<BlogList />} />
           <Route path="/blog-details" element={<BlogDetails />} />
           <Route path="/blog-author" element={<Author />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/subgallery" element={<Subgallery />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/subgallery" element={<Subgallery />} />
         </Routes>
