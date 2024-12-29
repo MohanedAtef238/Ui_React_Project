@@ -169,7 +169,7 @@ const BlogDetails = () => {
                                     ))}
                                 </div>
                             </section>
-                            <Link to="/" className="back">
+                            <Link to="/blog-list" className="back">
                                 <span className="button-text">Back to Blogs</span>
                             </Link>
                         </div>
