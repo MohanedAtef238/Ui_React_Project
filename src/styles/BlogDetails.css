@@ -1,0 +1,189 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f5f5f5, #ffffff);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(to right, #007BFF, #0056b3);
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: -30px;
+    margin-left: -100px;
+    margin-right: -100px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+/* Image Container */
+.img-container {
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 400px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.img-container:hover img {
+    transform: scale(1.1);
+}
+
+.img-container .caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1.4rem;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+.img-container:hover .caption {
+    opacity: 1;
+}
+
+/* Section Title */
+.title-container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title-container h1 {
+    font-size: 2rem;
+    color: #007BFF;
+    text-transform: capitalize;
+}
+
+/* About Section */
+.about-content {
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 1250px;
+}
+
+.about-content h3 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+.about-content p,
+.about-content li {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Comments Section */
+.comments {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+}
+
+.comments h2 {
+    font-size: 1.5rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.comments textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.comments button {
+    display: block;
+    margin: 0 auto;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.comments button:hover {
+    background: #0056b3;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-content,
+    .comments {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
