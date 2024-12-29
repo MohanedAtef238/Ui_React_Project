@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './assets/Sources/css/Footer.css';
 import './assets/Sources/css/InfoPage.css';
-import img1 from './assets/Sources/img/Gallery/mainG1.jpg';
-import img2 from './assets/Sources/img/Gallery/mainG2.jpg';
+import img1 from "./assets/Sources/img/Destinations/London2.jpg";
+import img2 from "./assets/Sources/img/Destinations/Giza.jpg";
+import img3 from "./assets/Sources/img/Destinations/Paris.jpeg";
+import img4 from "./assets/Sources/img/Destinations/Tokyo.jpeg";
+import img5 from "./assets/Sources/img/Destinations/Sydney.jpeg";
+import img6 from "./assets/Sources/img/Destinations/Rome.jpeg";
 
-const API_KEY = "594ce593b6b44a20720693e4730ff57d";
+const API_KEY = "fd2f85cc3da161007ed38993a299ef2311";
 const cities = ["London", "Cairo", "Paris", "Tokyo", "Sydney", "Rome"];
 
 function InfoPage() {
@@ -39,7 +43,7 @@ function InfoPage() {
     fetchAllWeatherData();
   }, []);
 
-  const images = [img1, img2, img1, img2, img1, img2];
+  const images = [img1, img2, img3, img4, img5, img6];
 
   return (
     <div className="InfoPage-container">
