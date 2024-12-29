@@ -1,0 +1,128 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
+
+.site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.fh5co-about-me {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.portfolio-wrapper {
+    text-align: center;
+}
+
+.portfolio__img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e91e63;
+    transition: transform 0.3s ease;
+}
+
+.portfolio__img img:hover {
+    transform: scale(1.1);
+}
+
+.portfolio__bottom {
+    margin-top: 20px;
+}
+
+.portfolio__name h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #e91e63;
+    margin: 10px 0;
+}
+
+.about-me__text {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.about-me-slider {
+    margin-top: 20px;
+}
+
+.fh5co-books {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.single-book {
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #eaeaea;
+}
+
+.single-book:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.single-book__img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.single-book__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.read-more {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #e91e63;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #d81b60;
+}
+
+.brand-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1928b2;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.brand-button:hover {
+    background-color: #121c7c;
+}
