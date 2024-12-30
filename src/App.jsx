@@ -10,6 +10,11 @@ import DestForm from "./DestForm";
 import BlogList from './components/BlogList';
 import BlogDetails from './components/BlogDetails';
 import Author from './components/Author';
+import Contact from './Contact';
+
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
@@ -21,8 +26,7 @@ function App() {
           <Route path="/TravelList" element={<TravelList />} />
           <Route path="/destination/:title" element={<Destination />}/>
           <Route path="/FAQs" element={<FAQs />}/>  
-          
-          <Route path="/destination/:title" element={<Destination />}/>
+          <Route path="/Contact" element={<Contact />}/>  
           <Route path="/destinationForm" element={<DestForm/>}/>
           <Route path="/blog-list" element={<BlogList />} />
           <Route path="/blog-details" element={<BlogDetails />} />
