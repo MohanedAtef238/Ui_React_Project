@@ -71,40 +71,115 @@ h2 {
     border-bottom: 2px solid #FDBC86;
 } */
 .wrapper {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.accordion {
+  width: 500px;
+}
+
+.item {
+  background: #f0ebef;
+  margin-bottom: 5px;
+  padding: 10px 20px;
+}
+
+.title {
+  color: #885662;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.content {
+  color: #8b7f75;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.content.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+.FAQs-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background: #f9f6f2; /* Light background for FAQs */
+}
+
+.FAQs {
+  width: 600px;
+  max-width: 90%;
+  background: #ffffff; /* White background for contrast */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.FAQ-item {
+  border-bottom: 1px solid #e0e0e0; /* Divider between FAQs */
+  padding: 15px 20px;
+}
+
+.FAQ-item:last-child {
+  border-bottom: none; /* Remove the border for the last item */
+}
+
+.FAQ-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #4a4a4a;
+  transition: color 0.3s ease;
+}
+
+.FAQ-title:hover {
+  color: #885662; /* Match hover color with the style in .wrapper */
+}
+
+.FAQ-content {
+  max-height: 0;
+  overflow: hidden;
+  color: #6b6b6b;
+  font-size: 1rem;
+  line-height: 1.5;
+  transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+.FAQ-content.show {
+  max-height: 100vh; /* Allow content to fully expand */
+  transition: max-height 0.5s cubic-bezier(1, 0, 1, 0);
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .FAQs-container {
+    padding: 10px;
   }
-  
-  .accordion {
-    width: 500px;
+
+  .FAQs {
+    width: 100%;
   }
-  
-  .item {
-    background: #f0ebef; 
-    margin-bottom: 5px;
-    padding: 10px 20px;
+
+  .FAQ-title {
+    font-size: 1rem;
   }
-  
-  .title {
-    color: #885662; 
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    cursor: pointer;
+
+  .FAQ-content {
+    font-size: 0.9rem;
   }
-  
-  .content {
-    color: #8b7f75;
-    max-height: 0;
-    overflow: hidden;
-    transition: all 0.5s cubic-bezier(0, 1, 0, 1); 
-  }
-  
-  .content.show {
-    height: auto;
-    max-height: 9999px; 
-    transition: all 0.5s cubic-bezier(1, 0, 1, 0); 
-  }
+}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/BlogList.css'; // Ensure this path is correct
+import '../styles/BlogList.css'; 
 
 const BlogList = () => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -8,7 +8,6 @@ const BlogList = () => {
 
     useEffect(() => {
         console.log('BlogList loaded');
-        // Add any additional JavaScript functionality here
     }, []);
 
     const handleSearch = (event) => {

@@ -42,10 +42,10 @@ const Author = () => {
                 <div className="site-container">
                     <h2>Ahmed's Blogs</h2>
                     <div className="books">
-                        <BlogCard imgSrc="/img/blogss/Argentina.jpg" title="A Big Apartment" link="/blog-details" />
-                        <BlogCard imgSrc="/img/blogss/Argentina.jpg" title="I Only See Indians" link="/blog-details" />
-                        <BlogCard imgSrc="/img/blogss/Argentina.jpg" title="Camelopedia" link="/blog-details" />
-                        <BlogCard imgSrc="/img/blogss/Argentina.jpg" title="Messi" link="/blog-details" />
+                        <BlogCard imgSrc="/img/blogss/sq1.jpg" title="A Big Apartment" link="/blog-details" />
+                        <BlogCard imgSrc="/img/blogss/sq2.jpg" title="I Only See Indians" link="/blog-details" />
+                        <BlogCard imgSrc="/img/blogss/sq3.jpg" title="Camelopedia" link="/blog-details" />
+                        <BlogCard imgSrc="/img/blogss/sq4.jpg" title="Messi" link="/blog-details" />
                     </div>
                     <Link to="/blog-details" className="brand-button">Back to Blog</Link>
                 </div>

@@ -14,7 +14,6 @@ const BlogDetails = () => {
         link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
         document.head.appendChild(link);
 
-        // Clean up to remove link tag when component unmounts
         return () => {
             document.head.removeChild(link);
         };    }, []);

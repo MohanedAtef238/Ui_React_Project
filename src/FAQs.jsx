@@ -36,7 +36,7 @@ function FAQs() {
   ];
 
   return (
-    <div className="wrapper">
+    <div className="FAQs-container">
       {/* Use Helmet to set the title */}
       <Helmet>
         <title> FAQs:</title>
