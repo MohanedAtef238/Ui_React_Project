@@ -13,6 +13,7 @@ import Author from './components/Author';
 import Gallery from './Gallery';
 import Subgallery from './subgallery';
 import Contact from './Contact';
+import InfoPage from "./InfoPage";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path="/blog-author" element={<Author />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/subgallery" element={<Subgallery />} />
+          <Route path="/InfoPage" element={<InfoPage />} />
         </Routes>
       </BrowserRouter>
     </div>
