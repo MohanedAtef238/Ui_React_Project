@@ -7,8 +7,11 @@ import img3 from "./assets/Sources/img/Destinations/Paris.jpeg";
 import img4 from "./assets/Sources/img/Destinations/Tokyo.jpeg";
 import img5 from "./assets/Sources/img/Destinations/Sydney.jpeg";
 import img6 from "./assets/Sources/img/Destinations/Rome.jpeg";
+import dotenv from 'dotenv';
+dotenv.config
 
-const API_KEY = "fd2f85cc3da161007ed38993a299ef2311";
+const API_KEY = import.meta.env.VITE_API;
+console.log(API_KEY)
 const cities = ["London", "Cairo", "Paris", "Tokyo", "Sydney", "Rome"];
 
 function InfoPage() {
