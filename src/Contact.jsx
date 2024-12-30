@@ -2,10 +2,9 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import './assets/Sources/css/ContactUs.css'; 
 
-
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact-container">
       <form>
         <h2>Contact Form</h2>
         
